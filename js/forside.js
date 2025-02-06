@@ -1,10 +1,9 @@
-// Simpel hover-effekt til navigation
-document.querySelectorAll("nav ul li a").forEach(link => {
-    link.addEventListener("mouseover", () => {
-        link.style.transform = "scale(1.1)";
-    });
+// script.js
+document.addEventListener('DOMContentLoaded', function() {
+    const burger = document.querySelector('.burger');
+    const folderTabs = document.getElementById('folder-tabs');
 
-    link.addEventListener("mouseout", () => {
-        link.style.transform = "scale(1)";
+    burger.addEventListener('click', function() {
+        folderTabs.classList.toggle('active');
     });
 });

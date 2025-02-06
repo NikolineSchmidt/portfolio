@@ -7,30 +7,77 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    padding-top: 50px; /* LØFTER INDHOLD NED */
 }
 
-/* Folder container - Lidt længere nede */
+/* Folder container - Justeret */
 .folder {
     width: 90%;
     max-width: 1400px;
-    height: 75vh; /* Justeret en smule */
+    height: 70vh; /* Justeret højde */
     background: linear-gradient(135deg, #90CAF9, #64B5F6);
     border-radius: 15px;
     box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.3);
     padding: 30px;
     position: relative;
-    margin-top: 30px; /* Skubber den NED */
+    margin-top: 10px; /* Reduceret margin-top */
+}
+
+/* burger menu styling */
+.burger {
+    display: none; /* Skjul som standard */
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.burger-box {
+    width: 30px;
+    height: 24px;
+    display: inline-block;
+    position: relative;
+}
+
+.burger-inner {
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: background-color 0.3s ease-in-out;
+}
+
+.burger-inner::before,
+.burger-inner::after {
+    content: '';
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    position: absolute;
+    left: 0;
+    transition: transform 0.3s ease-in-out;
+}
+
+.burger-inner::before {
+    top: -8px;
+}
+
+.burger-inner::after {
+    top: 8px;
 }
 
 /* Faner (Tabs) */
 .folder-tabs {
     display: flex;
     position: absolute;
-    top: -50px; /* Lidt lavere */
+    top: -50px; /* Justeret til at hænge over mappen */
     left: 30px;
 }
-
 
 .tab {
     background: #64B5F6;
@@ -63,63 +110,61 @@ body {
 
 /* MEDIA QUERIES */
 
-/* Tablet */
-@media (max-width: 1024px) {
-    .folder {
-        width: 95%;
-        height: 75vh;
-    }
-
-    .folder-tabs {
-        top: -50px;
-        left: 20px;
-    }
-
-    .tab {
-        padding: 15px 30px;
-        font-size: 1.3rem;
-    }
-
-    .folder-content {
-        font-size: 1.8rem;
-    }
-}
-
-/* Mobil */
+/* 📱 Små tablets & store mobiler */
 @media (max-width: 768px) {
     .folder {
         width: 95%;
-        height: 70vh;
-    }
-
-    .folder-tabs {
-        top: -40px;
-        left: 15px;
+        max-width: 90%;
     }
 
     .tab {
-        padding: 12px 20px;
-        font-size: 1.2rem;
-    }
-
-    .folder-content {
-        font-size: 1.5rem;
-    }
-}
-
-/* Ekstra små skærme (f.eks. telefoner i portræt) */
-@media (max-width: 480px) {
-    .folder {
-        width: 98%;
-        height: 60vh;
-    }
-
-    .tab {
-        padding: 10px 15px;
+        padding: 12px;
         font-size: 1rem;
     }
 
     .folder-content {
         font-size: 1.2rem;
+    }
+
+    .burger {
+        display: block; /* Vis hamburger-menuen */
+    }
+
+    .folder-tabs {
+        display: none; /* Skjul faner som standard */
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: #64B5F6;
+        border-radius: 0 0 15px 15px;
+        padding: 10px 0;
+    }
+
+    .folder-tabs.active {
+        display: flex; /* Vis faner når hamburger-menuen er aktiv */
+    }
+
+    .tab {
+        width: 100%;
+        text-align: center;
+        margin: 5px 0;
+    }
+}
+
+/* 📱 Ekstra små skærme (telefoner i portræt) */
+@media (max-width: 480px) {
+    .folder {
+        width: 98%;
+        padding: 15px;
+    }
+
+    .folder-tabs {
+        top: 50px;
+    }
+
+    .folder-content {
+        font-size: 1rem;
     }
 }

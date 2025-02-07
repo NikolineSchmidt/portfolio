@@ -9,25 +9,25 @@ body {
     margin: 0;
 }
 
-/* Folder container - Justeret */
+/* Folder container */
 .folder {
     width: 90%;
-    max-width: 1400px;
-    height: 70vh; /* Justeret højde */
+    max-width: 1600px;
+    height: 70vh;
     background: linear-gradient(135deg, #90CAF9, #64B5F6);
     border-radius: 15px;
     box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.3);
-    padding: 30px;
-    position: relative; /* Vigtigt: Gør footeren relativ til denne container */
-    margin-top: 10px; /* Reduceret margin-top */
+    padding: 40px;
+    position: relative;
+    margin-top: 10px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Placerer indhold og footer i hver sin ende */
+    justify-content: space-between;
 }
 
 /* Burger menu styling */
 .burger {
-    display: none; /* Skjul som standard */
+    display: none;
     position: absolute;
     top: 20px;
     right: 20px;
@@ -78,13 +78,13 @@ body {
 .folder-tabs {
     display: flex;
     position: absolute;
-    top: -50px; /* Justeret til at hænge over mappen */
+    top: -50px;
     left: 30px;
 }
 
 .tab {
     background: #64B5F6;
-    padding: 20px 40px; /* STØRRE faner */
+    padding: 20px 40px;
     border-radius: 12px 12px 0 0;
     font-weight: bold;
     color: white;
@@ -103,25 +103,26 @@ body {
     background: #1E88E5;
 }
 
-/* Folder indhold - større font */
+/* Folder indhold */
 .folder-content {
     text-align: center;
     color: #fff;
     font-size: 2rem;
-    flex-grow: 1; /* Fylder resterende plads */
+    flex-grow: 1;
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Centrerer indholdet lodret */
+    justify-content: center;
 }
 
-/* Footer styling */
+/* Footer */
 .folder-footer {
-    padding: 15px 30px;
-    border-radius: 0 0 15px 15px;
+    padding: 20px 30px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: auto; /* Placerer footeren i bunden */
+    margin-top: auto;
 }
 
 .contact-info {
@@ -135,7 +136,7 @@ body {
 
 .social-icons {
     display: flex;
-    gap: 15px;
+    gap: 20px;
 }
 
 .social-icons a {
@@ -145,92 +146,196 @@ body {
 }
 
 .social-icons a:hover {
-    color: #1E88E5; /* Farve ved hover */
+    color: #1E88E5;
 }
 
-/* MEDIA QUERIES */
-
-/* 📱 Små tablets & store mobiler */
 @media (max-width: 768px) {
+    /* Gør folderen til at fylde hele skærmen */
     .folder {
-        width: 95%;
-        max-width: 90%;
-    }
-
-    .tab {
-        padding: 12px;
-        font-size: 1rem;
-    }
-
-    .folder-content {
-        font-size: 1.2rem;
-    }
-
-    .burger {
-        display: block; /* Vis hamburger-menuen */
-    }
-
-    .folder-tabs {
-        display: none; /* Skjul faner som standard */
+        width: 100vw;  /* Fylder hele skærmens bredde */
+        height: 100vh; /* Fylder hele skærmens højde */
+        background-color: #64B5F6; /* Blå baggrund */
+        border-radius: 0; /* Fjern afrundede hjørner */
+        padding: 15px; /* Mindre padding for at spare plads */
+        display: flex;
         flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        box-shadow: none; /* Fjern skygge på mobil */
+    }
+
+    /* Burgermenu med mindre plads over og kompakt stil */
+    .burger {
+        display: block;
         position: absolute;
-        top: 60px;
+        top: 20px; /* Mindre plads over burgermenuen */
+        right: 15px; /* Tættere på højre kant */
+        z-index: 1001; /* Sørg for, at den er øverst */
+        cursor: pointer;
+        background: none;
+        border: none;
+        padding: 8px; /* Mindre klikbart område */
+    }
+
+    .burger-box {
+        width: 30px;
+        height: 24px;
+        display: inline-block;
+        position: relative;
+    }
+
+    .burger-inner {
+        width: 100%;
+        height: 3px;
+        background-color: white;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        transition: all 0.3s ease-in-out;
+    }
+
+    .burger-inner::before,
+    .burger-inner::after {
+        content: '';
+        width: 100%;
+        height: 3px;
+        background-color: white;
+        position: absolute;
+        left: 0;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .burger-inner::before {
+        top: -8px;
+    }
+
+    .burger-inner::after {
+        top: 8px;
+    }
+
+    /* Krydsanimation når burgermenuen er aktiv */
+    .burger.active .burger-inner {
+        background-color: transparent; /* Fjern den midterste linje */
+    }
+
+    .burger.active .burger-inner::before {
+        transform: rotate(45deg) translate(5px, 5px); /* Roter til kryds */
+    }
+
+    .burger.active .burger-inner::after {
+        transform: rotate(-45deg) translate(5px, -5px); /* Roter til kryds */
+    }
+
+    /* Undermenu (faner) */
+    .folder-tabs {
+        position: fixed;
+        top: 0;
         left: 0;
         width: 100%;
-        background: #64B5F6;
-        border-radius: 0 0 15px 15px;
-        padding: 10px 0;
-    }
-
-    .folder-tabs.active {
-        display: flex; /* Vis faner når hamburger-menuen er aktiv */
-    }
-
-    .tab {
-        width: 100%;
-        text-align: center;
-        margin: 5px 0;
-    }
-
-    .folder-footer {
+        height: 100vh;
+        background: rgba(100, 181, 246, 0.98); /* Solid blå baggrund */
+        display: flex;
         flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        transform: translateY(-100%);
+        transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+        z-index: 1000; /* Sørg for, at den er over alt andet */
+    }
+
+    /* Når menuen åbnes */
+    .folder-tabs.active {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    /* Stil på undermenu knapper (faner) */
+    .tab {
+        padding: 12px 20px; /* Mindre padding for kompakt stil */
+        font-size: 1.2rem; /* Mindre tekststørrelse */
+        width: 80%;
+        max-width: 250px; /* Smallere knapper */
         text-align: center;
-        padding: 10px;
+        background: white;
+        color: #1E88E5;
+        border-radius: 8px;
+        margin: 8px 0; /* Mindre afstand mellem knapper */
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+        cursor: pointer;
+        transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+    }
+
+    .tab:hover {
+        background: #1E88E5;
+        color: white;
+    }
+
+    /* Aktiv fane */
+    .active {
+        background: #1E88E5;
+        color: white;
+    }
+
+    /* Indhold i mappen */
+    .folder-content {
+        text-align: center;
+        color: #fff;
+        font-size: 1.2rem; /* Mindre tekst på mobil */
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 15px; /* Mindre padding */
+    }
+
+    .folder-content h1 {
+        font-size: 1.8rem; /* Mindre overskrift */
+        margin-bottom: 15px; /* Mindre afstand under overskrift */
+    }
+
+    .folder-content p {
+        font-size: 1rem; /* Mindre brødtekst */
+        line-height: 1.4; /* Tættere linjeafstand */
+    }
+
+    /* Footer */
+    .folder-footer {
+        padding: 15px; /* Mindre padding */
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 12px;
+        display: flex;
+        flex-direction: column; /* Stak elementer lodret på mobil */
+        align-items: center;
+        gap: 8px; /* Mindre afstand mellem elementer */
+        margin-top: auto;
+        width: 100%;
+        max-width: 300px; /* Smallere footer */
     }
 
     .contact-info {
-        margin-bottom: 10px;
+        color: white;
+        font-size: 0.9rem; /* Mindre tekststørrelse */
+        text-align: center; /* Centrer tekst */
+    }
+
+    .contact-info p {
+        margin: 3px 0; /* Mindre afstand mellem linjer */
     }
 
     .social-icons {
-        gap: 10px;
-    }
-}
-
-/* 📱 Ekstra små skærme (telefoner i portræt) */
-@media (max-width: 480px) {
-    .folder {
-        width: 98%;
-        padding: 15px;
-    }
-
-    .folder-tabs {
-        top: 50px;
-    }
-
-    .folder-content {
-        font-size: 1rem;
-    }
-
-    .folder-footer {
-        padding: 5px;
-    }
-
-    .contact-info {
-        font-size: 0.9rem;
+        display: flex;
+        gap: 15px; /* Mindre afstand mellem ikoner */
     }
 
     .social-icons a {
-        font-size: 1.2rem;
+        color: white;
+        font-size: 1.2rem; /* Mindre ikonstørrelse */
+        transition: color 0.3s ease-in-out;
+    }
+
+    .social-icons a:hover {
+        color: #1E88E5;
     }
 }

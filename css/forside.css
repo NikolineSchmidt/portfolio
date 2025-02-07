@@ -9,6 +9,34 @@ body {
     margin: 0;
 }
 
+/* Tilføj denne CSS for at style logoet */
+.logo {
+    height: 40px; /* Juster højden efter behov */
+    width: auto; /* Bevar logoets proportioner */
+    display: block; /* Sørg for, at det fylder hele pladsen */
+}
+
+/* Juster faner (tabs) for at inkludere logoet */
+.tab {
+    display: flex;
+    align-items: center; /* Centrer logoet lodret */
+    justify-content: center; /* Centrer logoet vandret */
+    background: #64B5F6;
+    padding: 10px 20px; /* Mindre padding for logoet */
+    border-radius: 12px 12px 0 0;
+    font-weight: bold;
+    color: white;
+    margin-right: 8px;
+    text-decoration: none;
+    font-size: 1.5rem;
+    transition: background 0.3s ease-in-out;
+}
+
+/* Juster aktiv fane for logoet */
+.tab.active {
+    background: #1E88E5;
+}
+
 /* Folder container */
 .folder {
     width: 90%;
@@ -87,7 +115,7 @@ body {
     padding: 20px 40px;
     border-radius: 12px 12px 0 0;
     font-weight: bold;
-    color: white;
+    color: #fcdef0;
     margin-right: 8px;
     text-decoration: none;
     font-size: 1.5rem;
@@ -225,6 +253,15 @@ body {
 
     .burger.active .burger-inner::after {
         transform: rotate(-45deg) translate(5px, -5px); /* Roter til kryds */
+    }
+
+    .logo {
+        height: 30px; /* Mindre logo på mobil */
+    }
+
+    .tab {
+        padding: 10px 15px; /* Mindre padding på mobil */
+        font-size: 1.2rem; /* Mindre tekststørrelse */
     }
 
     /* Undermenu (faner) */

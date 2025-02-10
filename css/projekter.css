@@ -6,11 +6,13 @@
     align-items: center;
     margin-bottom: 50px;
 }
-@media (max-width: 768px) {
-    .projects-grid{
-        flex-direction: column;
-    }
+
+
+.projects-grid.reverse {
+    flex-direction: row-reverse;
 }
+
+
 
 .note-container {
     width: 50%;
@@ -19,11 +21,7 @@
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
     font-family: "Arial", sans-serif;
 }
-@media (max-width: 768px) {
-    .note-container {
-        width: 100%;
-    }
-}
+
 
 /* Øverste bjælke med MacOS-knapper */
 .note-header {
@@ -173,13 +171,23 @@
 .image{
     width: 50%;
 }
-@media (max-width: 768px) {
-    .image {
-        width: 100%;
-    }
-}
 
 .image img{
     width: 100%;
 }
+
+
+@media (max-width: 768px) {
+    .image {
+        width: 100%;
+    }
+    .projects-grid{
+        flex-direction: column;
+    }
+    .note-container {
+        width: 100%;
+    }
+}
+
+
 

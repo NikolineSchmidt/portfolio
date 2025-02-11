@@ -232,6 +232,29 @@ button:hover {
 
 
 
+/* Stil til video-sektionen */
+.video-section {
+    display: flex;
+    flex-direction: row; /* Ændret til row, så videoer står ved siden af hinanden */
+    gap: 20px; /* Mellemrum mellem videoerne */
+    justify-content: center; /* Centerer videoerne horisontalt */
+    flex-wrap: wrap; /* Gør, at videoerne kan bryde linje på mindre skærme */
+}
+
+.video-container {
+    flex: 1 1 30%; /* Sørger for, at hver video fylder 30% af containerens bredde */
+    max-width: 100%; /* Forhindrer videoerne i at blive for brede */
+    margin: 0 auto; /* Centerer videoerne i deres container */
+}
+
+video {
+    width: 100%; /* Gør videoerne responsive */
+    height: auto; /* Bevarer videoens proportioner */
+    border-radius: 8px; /* Giver videoerne rundede hjørner */
+}
+
+
+
 
 
 @media (max-width: 768px) {

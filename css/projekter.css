@@ -231,6 +231,13 @@ button:hover {
 }
 
 
+.video-heading {
+    text-align: center; /* Centrerer overskriften */
+    font-size: 24px; /* Større skriftstørrelse */
+    font-weight: bold; /* Gør overskriften fed */
+    margin-bottom: 20px; /* Mellemrum under overskriften */
+    color: #333; /* Mørk tekstfarve for god læsbarhed */
+}
 
 /* Stil til video-sektionen */
 .video-section {
@@ -275,6 +282,16 @@ video {
     /* Juster tekstjusteringen for mobil */
     .note-content, .note-text, .task-list li, .checkboxes li {
         text-align: left;
+    }
+
+    .video-section {
+        flex-direction: row; /* Ændrer til kolonne på små skærme, så videoerne vises under hinanden */
+        gap: 15px; /* Mellemrum mellem videoerne på mobile enheder */
+    }
+
+    .video-container {
+        flex: 1 1 100%; /* Gør, at videoerne fylder 100% af bredden */
+        max-width: 100%; /* Videoerne fylder hele bredden */
     }
 }
 

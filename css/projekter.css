@@ -1,9 +1,9 @@
 
-.projects-grid{
+.projects-grid {
     display: flex;
     flex-direction: row;
     gap: 20px;
-    align-items: center;
+    align-items: flex-start; /* Tilføj denne linje */
     margin-bottom: 50px;
 }
 
@@ -177,6 +177,63 @@
 }
 
 
+.carousel-container {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    overflow: hidden;
+    align-self: flex-start; /* Tilføj denne linje */
+}
+
+.carousel-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    max-height: 450px; /* Juster denne værdi efter behov */
+    object-fit: cover; /* Sørg for, at billederne fylder karusellen uden at forvrænge */
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-item {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+button.carousel-prev,
+button.carousel-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #fceff7;
+    color: #555;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    z-index: 1000;
+}
+
+.carousel-prev {
+    left: 0;
+}
+
+.carousel-next {
+    right: 0;
+}
+
+button:hover {
+    background-color: #fcdef0;
+}
+
+
+
+
+
 @media (max-width: 768px) {
     .image {
         width: 100%;
@@ -184,8 +241,17 @@
     .projects-grid{
         flex-direction: column;
     }
+
+    .projects-grid.reverse {
+        flex-direction: column; /* Billede kommer efter note-content på mobil */
+    }
     .note-container {
         width: 100%;
+    } 
+
+    /* Juster tekstjusteringen for mobil */
+    .note-content, .note-text, .task-list li, .checkboxes li {
+        text-align: left;
     }
 }
 

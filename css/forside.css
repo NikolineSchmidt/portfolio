@@ -1,65 +1,24 @@
-/* Sektion med flexbox */
-.forside {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 90%;
-    max-width: 1200px;
-    margin: 50px auto;
-}
 
-/* Venstre side med overskrift og GIF */
-.left-side {
+.text{
     width: 50%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start; /* Holder tingene til venstre */
-    margin-left: -50px; /* Skubber det længere mod venstre */
 }
 
-/* Overskrift styles */
-.forside-title {
-    font-size: 2rem;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 10px;
-    margin-bottom: 20px; /* Lidt afstand mellem overskrift og GIF */
+.image{
+    width: 35%;
+    align-self: flex-end;
 }
 
-/* GIF-container */
-.gif-container {
+.image img{
     width: 100%;
-}
-
-.gif-container img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-/* Højre side med tekst */
-.folder-content {
-    width: 45%;
-    text-align: left;
-    padding-left: 20px;
 }
 
 /* Mobilvenlig justering */
 @media (max-width: 768px) {
-    .forside {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    .left-side {
+    .folder-content div {
         width: 100%;
-        text-align: center;
-        margin-left: 0; /* Tilbage til normal på mobil */
     }
-
-    .forside-title {
-        font-size: 1.5rem;
-        padding: 8px 15px;
+    .folder-image {
+        width: 100%;
+        margin-bottom: 40px;
     }
 }

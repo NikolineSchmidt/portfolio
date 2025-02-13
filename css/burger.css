@@ -1,0 +1,70 @@
+
+.burger {
+    display: none;
+}
+
+
+@media (max-width: 768px) {
+    .burger {
+        display: block;
+        position: absolute;
+        top: 20px; /* Mindre plads over burgermenuen */
+        right: 15px; /* Tættere på højre kant */
+        cursor: pointer;
+        background: none;
+        border: none;
+        padding: 8px; /* Mindre klikbart område */
+        z-index: 1001;
+    }
+
+    .burger-box {
+        width: 30px;
+        height: 24px;
+        display: inline-block;
+        position: relative;
+    }
+
+    .burger-inner {
+        width: 100%;
+        height: 3px;
+        background-color: white;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        transition: all 0.3s ease-in-out;
+    }
+
+    .burger-inner::before,
+    .burger-inner::after {
+        content: '';
+        width: 100%;
+        height: 3px;
+        background-color: white;
+        position: absolute;
+        left: 0;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .burger-inner::before {
+        top: -8px;
+    }
+
+    .burger-inner::after {
+        top: 8px;
+    }
+
+    /* Krydsanimation når burgermenuen er aktiv */
+    .burger.active .burger-inner {
+        background-color: transparent; /* Fjern den midterste linje */
+    }
+
+    .burger.active .burger-inner::before {
+        transform: rotate(45deg) translate(5px, 5px); /* Roter til kryds */
+    }
+
+    .burger.active .burger-inner::after {
+        transform: rotate(-45deg) translate(5px, -5px); /* Roter til kryds */
+    }
+
+}

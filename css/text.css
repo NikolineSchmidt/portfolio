@@ -1,0 +1,67 @@
+
+/* Overskrifter */
+h1{
+    font-family: "Poppins", serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 40px;
+}
+h1.hide-on-desktop{
+    display: none;
+}
+@media (max-width: 768px) {
+    h1.hide-on-desktop{
+        display: block;
+    }
+}
+
+/* Om mig titel */
+h2{
+    font-family: "Poppins", serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 40px;
+}
+
+/* Små overskrifter i noter */
+h3{
+    font-family: "Poppins", serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 21px;
+    color: #555;
+}
+
+/* tekst på forsiden */
+h4{
+    font-family: "Poppins", serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 40px;
+    line-height: 1.5;
+    color: #fff;
+}
+@media (max-width: 768px) {
+    h4{
+        font-size: 28px;
+    }
+}
+
+/* Alle titler i noter */
+h5{
+    font-family: "Poppins", serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 18px;
+    color: #555;
+}
+
+p{
+    font-size: 20px;
+    line-height: 1.475;
+}
+@media (max-width: 768px) {
+    p {
+        font-size: 19px;
+    }
+}

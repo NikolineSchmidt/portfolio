@@ -8,56 +8,6 @@ body {
     margin: 0;
 }
 
-h1{
-    font-family: "Spicy Rice", serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-h2{
-    font-size: 1.3rem;
-    margin-bottom: 10px;
-    color: #555;
-}
-
-h4{
-    font-size: 1.2rem;
-    line-height: 1.125;
-}
-
-p{
-    font-size: 1.125rem;
-    line-height: 1.375;
-}
-
-/* Tilføj denne CSS for at style logoet */
-.logo {
-    height: 40px; /* Juster højden efter behov */
-    width: auto; /* Bevar logoets proportioner */
-    display: block; /* Sørg for, at det fylder hele pladsen */
-}
-
-/* Juster faner (tabs) for at inkludere logoet */
-.tab {
-    display: flex;
-    align-items: center; /* Centrer logoet lodret */
-    justify-content: center; /* Centrer logoet vandret */
-    background: #64B5F6;
-    padding: 10px 20px; /* Mindre padding for logoet */
-    border-radius: 12px 12px 0 0;
-    font-weight: bold;
-    color: #fcdef0;
-    margin-right: 8px;
-    text-decoration: none;
-    font-size: 1.5rem;
-    transition: background 0.3s ease-in-out;
-}
-
-/* Juster aktiv fane for logoet */
-.tab.active {
-    background: #1E88E5;
-}
-
 /* Folder container */
 .folder {
     width: 90%;
@@ -75,7 +25,6 @@ p{
     margin-top: 75px;
     margin-bottom: 40px;
 }
-
 
 /* Indhold i mappen */
 .folder-content {
@@ -97,84 +46,7 @@ p{
     justify-content: space-between;
     align-items: center;
     margin-top: auto; /* Skubber footeren til bunden */
-}
-
-/* Burger menu styling */
-.burger {
-    display: none;
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    z-index: 1000;
-}
-
-.burger-box {
-    width: 30px;
-    height: 24px;
-    display: inline-block;
-    position: relative;
-}
-
-.burger-inner {
-    width: 100%;
-    height: 3px;
-    background-color: white;
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    transition: background-color 0.3s ease-in-out;
-}
-
-.burger-inner::before,
-.burger-inner::after {
-    content: '';
-    width: 100%;
-    height: 3px;
-    background-color: white;
-    position: absolute;
-    left: 0;
-    transition: transform 0.3s ease-in-out;
-}
-
-.burger-inner::before {
-    top: -8px;
-}
-
-.burger-inner::after {
-    top: 8px;
-}
-
-/* Faner (Tabs) */
-.folder-tabs {
-    display: flex;
-    position: absolute;
-    top: -50px;
-    left: 30px;
-}
-
-.tab {
-    background: #64B5F6;
-    padding: 20px 40px;
-    border-radius: 12px 12px 0 0;
-    font-weight: bold;
-    color: #fcdef0;
-    margin-right: 8px;
-    text-decoration: none;
-    font-size: 1.5rem;
-    transition: background 0.3s ease-in-out;
-}
-
-.tab:hover {
-    background: #42A5F5;
-}
-
-/* Aktiv fane */
-.active {
-    background: #1E88E5;
+    margin: 10px;
 }
 
 
@@ -206,7 +78,7 @@ p{
     /* Gør folderen til at fylde hele skærmen */
     .folder {
         width: 100vw;  /* Fylder hele skærmens bredde */
-        height: 100vh; /* Fylder hele skærmens højde */
+        min-height: 100vh; /* Fylder hele skærmens højde */
         background-color: #64B5F6; /* Blå baggrund */
         border-radius: 0; /* Fjern afrundede hjørner */
         padding: 15px; /* Mindre padding for at spare plads */
@@ -215,129 +87,8 @@ p{
         justify-content: flex-start;
         align-items: center;
         box-shadow: none; /* Fjern skygge på mobil */
-    }
-
-    /* Burgermenu med mindre plads over og kompakt stil */
-    .burger {
-        display: block;
-        position: absolute;
-        top: 20px; /* Mindre plads over burgermenuen */
-        right: 15px; /* Tættere på højre kant */
-        z-index: 1001; /* Sørg for, at den er øverst */
-        cursor: pointer;
-        background: none;
-        border: none;
-        padding: 8px; /* Mindre klikbart område */
-    }
-
-    .burger-box {
-        width: 30px;
-        height: 24px;
-        display: inline-block;
-        position: relative;
-    }
-
-    .burger-inner {
-        width: 100%;
-        height: 3px;
-        background-color: white;
-        position: absolute;
-        left: 0;
-        top: 50%;
-        transform: translateY(-50%);
-        transition: all 0.3s ease-in-out;
-    }
-
-    .burger-inner::before,
-    .burger-inner::after {
-        content: '';
-        width: 100%;
-        height: 3px;
-        background-color: white;
-        position: absolute;
-        left: 0;
-        transition: all 0.3s ease-in-out;
-    }
-
-    .burger-inner::before {
-        top: -8px;
-    }
-
-    .burger-inner::after {
-        top: 8px;
-    }
-
-    /* Krydsanimation når burgermenuen er aktiv */
-    .burger.active .burger-inner {
-        background-color: transparent; /* Fjern den midterste linje */
-    }
-
-    .burger.active .burger-inner::before {
-        transform: rotate(45deg) translate(5px, 5px); /* Roter til kryds */
-    }
-
-    .burger.active .burger-inner::after {
-        transform: rotate(-45deg) translate(5px, -5px); /* Roter til kryds */
-    }
-
-    .logo {
-        height: 30px; /* Mindre logo på mobil */
-    }
-
-    .tab {
-        padding: 10px 15px; /* Mindre padding på mobil */
-        font-size: 1.2rem; /* Mindre tekststørrelse */
-    }
-
-    /* Undermenu (faner) */
-    .folder-tabs {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100vh;
-        background: rgba(100, 181, 246, 0.98); /* Solid blå baggrund */
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        opacity: 0;
-        transform: translateY(-100%);
-        transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
-        z-index: 1000; /* Sørg for, at den er over alt andet */
-    }
-
-    /* Når menuen åbnes */
-    .folder-tabs.active {
-        opacity: 1;
-        transform: translateY(0);
-    }
-
-    /* Stil på undermenu knapper (faner) */
-    .tab {
-        padding: 12px 20px; /* Mindre padding for kompakt stil */
-        font-size: 1.2rem; /* Mindre tekststørrelse */
-        width: 80%;
-        max-width: 250px; /* Smallere knapper */
-        text-align: center;
-        background: white;
-        color: #1E88E5;
-        border-radius: 8px;
-        margin: 8px 0; /* Mindre afstand mellem knapper */
-        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
-        cursor: pointer;
-        transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
-    }
-
-    .tab:hover {
-        background: #1E88E5;
-        color: white;
-    }
-
-    /* Aktiv fane */
-    .active {
-        background: #1E88E5;
-        color: white;
+        margin: 0;
+        padding: 45px 0;
     }
 
     /* Indhold i mappen */
@@ -352,16 +103,6 @@ p{
         padding: 15px; /* Mindre padding */
     }
 
-    .folder-content h1 {
-        font-size: 1.8rem; /* Mindre overskrift */
-        margin-bottom: 15px; /* Mindre afstand under overskrift */
-    }
-
-    .folder-content p {
-        font-size: 1rem; /* Mindre brødtekst */
-        line-height: 1.4; /* Tættere linjeafstand */
-    }
-
     /* Footer */
     .folder-footer {
         padding: 15px; /* Mindre padding */
@@ -373,7 +114,7 @@ p{
         gap: 8px; /* Mindre afstand mellem elementer */
         margin-top: auto;
         width: 100%;
-        max-width: 300px; /* Smallere footer */
+        max-width: -webkit-fill-available;
     }
 
     .contact-info {

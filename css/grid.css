@@ -1,0 +1,26 @@
+.grid {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center; /* Tilføj denne linje */
+    margin: 40px 0;
+}
+
+.grid.reverse {
+    flex-direction: row-reverse;
+}
+
+.grid.forside{
+    gap: 55px;
+    justify-content: center;
+}
+
+@media (max-width: 768px) {
+    .grid{
+        flex-direction: column;
+    }
+
+    .grid.reverse {
+        flex-direction: column; /* Billede kommer efter note-content på mobil */
+    }
+}

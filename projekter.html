@@ -4,13 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projekter - Mit Portfolio</title>
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/burger.css">
     <link rel="stylesheet" href="css/generelt.css">
+    <link rel="stylesheet" href="css/text.css">
+    <link rel="stylesheet" href="css/grid.css">
+    <link rel="stylesheet" href="css/note.css">
     <link rel="stylesheet" href="css/projekter.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- Google fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Spicy+Rice&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -34,11 +39,11 @@
     
         <!-- Indhold i "mappen" -->
         <div class="folder-content">
-            <h1>Mine Projekter</h1>
 
+            <h1 class="hide-on-desktop">Mine projekter</h1>
 
             <!-- PROJEKT 1 -->
-            <div class="projects-grid">
+            <div class="grid">
                 <div class="note-container">
                     <div class="note-header">
                         <div class="buttons">
@@ -50,23 +55,23 @@
                     </div>
                     <div class="note-content">
                         <p class="note-date">Social Media & Content Creation</p>
-                        <h2>Wheretoaarhus</h2>
+                        <h3>Wheretoaarhus</h3>
                         <div class="note-text">
                             <ul class="task-list">
                                 <li>
-                                    <h4>Beskrivelse</h4>
+                                    <h5>Beskrivelse</h5>
                                     <p>Jeg lancerede wheretoaarhus i 2020 som et corona-projekt, da jeg blev træt af at besøge de samme caféer og restauranter. Jeg havde lyst til at opdage nye steder og dele mine oplevelser på Instagram. I dag bliver jeg inviteret til at anmelde caféer og restauranter, og jeg er også begyndt at dele indhold på TikTok.</p>
                                 </li>
                                 <li>
-                                    <h4>Vision</h4>
+                                    <h5>Vision</h5>
                                     <p>Min vision er at inspirere folk til at opdage nye steder i Aarhus og gøre det nemt for dem at finde gode restauranter og caféer. Jeg vil fortsat udvikle wheretoaarhus på både Instagram og TikTok, og udvide platformens rækkevidde gennem samarbejder med restauranter og autentiske anmeldelser.</p>
                                 </li>
                                 <li>
-                                    <h4>Vejen til resultatet</h4>
+                                    <h5>Vejen til resultatet</h5>
                                     <p>Jeg startede med at tage billeder og skrive korte anmeldelser, som jeg delte på Instagram. Med tiden fik jeg flere følgere og blev inviteret af restauranter, hvilket gjorde, at jeg begyndte at tage anmeldelserne mere seriøst og udvide til TikTok. Jeg fokuserer nu på at forbedre mine færdigheder inden for videoindhold og håber at opbygge et stærkt fællesskab, hvor folk i Aarhus bliver inspireret til at opdage nye steder gennem mine opslag og videoer, samtidig med at jeg skaber trendy og relevant content.</p>
                                 </li>
                                 <li>
-                                    <h4>Værktøjer</h4>
+                                    <h5>Værktøjer</h5>
                                     <ul class="checkboxes">
                                         <li><input type="checkbox" checked disabled>Adobe Photoshop</li>
                                         <li><input type="checkbox" checked disabled>Canva</li>
@@ -107,11 +112,13 @@
                     </div>
                     <button class="carousel-prev" onclick="moveSlide(-1)">&#10094;</button>
                     <button class="carousel-next" onclick="moveSlide(1)">&#10095;</button>
+                    <div class="tag">
+                        <span>@wheretoaarhus</span>
+                    </div>
                 </div>
 
             </div>
 
-            <h2 class="video-heading">wheretoaaarhus tiktoks</h2>
             <div class="video-section">
                 <div class="video-container">
                     <a href="https://www.tiktok.com/@wheretoaarhus" target="_blank">
@@ -132,7 +139,7 @@
             
 
             <!-- PROJEKT 2 -->
-            <div class="projects-grid reverse">
+            <div class="grid reverse">
                 <div class="note-container">
                     <div class="note-header">
                         <div class="buttons">
@@ -144,23 +151,23 @@
                     </div>
                     <div class="note-content">
                         <p class="note-date">Første alene projekt 1.semester</p>
-                        <h2>Online magasin</h2>
+                        <h3>Online magasin</h3>
                         <div class="note-text">
                             <ul class="task-list">
                                 <li>
-                                    <h4>Beskrivelse</h4>
+                                    <h5>Beskrivelse</h5>
                                     <p>Mit første individuelle projekt på studiet var at udvikle et online magasin, der skulle fokusere på unge i Aarhus og fungere som en guide til sjove oplevelser i byen. Magasinet skulle inspirere unge til at opdage nye caféer, restauranter og aktiviteter, både til hverdag og ved særlige lejligheder.</p>
                                 </li>
                                 <li>
-                                    <h4>Vision</h4>
+                                    <h5>Vision</h5>
                                     <p>Min vision var at skabe et magasin, der gav unge i Aarhus inspiration og praktiske tips til at få mest muligt ud af byens tilbud. Jeg ønskede at tilbyde en moderne og brugervenlig platform, der var let at navigere og samtidig æstetisk appellerende.</p>
                                 </li>
                                 <li>
-                                    <h4>Vejen til resultatet</h4>
+                                    <h5>Vejen til resultatet</h5>
                                     <p>Jeg startede med en målgruppeanalyse for at forstå unges interesser i Aarhus og valgte emner til magasinet ud fra dette. Jeg udviklede tre artikler: en guide til hverdagsoplevelser, idéer til første dates og en liste over byens bedste bmo. Designet blev moderne og stilrent, med billeder taget af mig selv for at skabe en sammenhængende æstetik. Jeg lavede et intuitivt sitemap og optimerede navigationen.</p>
                                 </li>
                                 <li>
-                                    <h4>Værktøjer</h4>
+                                    <h5>Værktøjer</h5>
                                     <ul class="checkboxes">
                                         <li><input type="checkbox" checked disabled>Adobe Photoshop</li>
                                         <li><input type="checkbox" checked disabled>HTML5</li>
@@ -180,7 +187,7 @@
             </div>
 
             <!-- PROJEKT 3 -->
-            <div class="projects-grid">
+            <div class="grid">
                 <div class="note-container">
                     <div class="note-header">
                         <div class="buttons">
@@ -192,23 +199,23 @@
                     </div>
                     <div class="note-content">
                         <p class="note-date">Eksamensprojekt på 1. semester i foråret 2024</p>
-                        <h2>Zerobuzz Brew</h2>
+                        <h3>Zerobuzz Brew</h3>
                         <div class="note-text">
                             <ul class="task-list">
                                 <li>
-                                    <h4>Beskrivelse</h4>
+                                    <h5>Beskrivelse</h5>
                                     <p>Mit eksamensprojekt i foråret 2024 var at udvikle et website for ZeroBuzz Brew, et fiktivt mikrobryggeri med alkoholfri øl. Jeg lavede alt indhold, herunder tekst, billeder og logo, med fokus på at fremhæve sammenhold og sundere alternativer til traditionel øl.</p>
                                 </li>
                                 <li>
-                                    <h4>Vision</h4>
+                                    <h5>Vision</h5>
                                     <p>Min vision var at skabe et website, der fremhævede ZeroBuzz Brew’s produkter og budskab om inklusion, hvor alkoholfri øl kunne være en del af sociale sammenhænge. Jeg udviklede også idéer til merchandise og en løbeklub for at styrke brandets forbindelse til forbrugerne gennem sunde og sociale aktiviteter.</p>
                                 </li>
                                 <li>
-                                    <h4>Vejen til resultatet</h4>
+                                    <h5>Vejen til resultatet</h5>
                                     <p>Jeg gennemførte interviews for at forstå målgruppens vaner og præferencer og brugte indsigt til at udvikle en persona, der repræsenterede ZeroBuzz Brew’s kernebrugere. Derefter skabte jeg moodboards og skitser for at udvikle den visuelle identitet og lavede en informationsarkitektur og sitemap for at optimere navigationen. Jeg sikrede, at websitet var mobil- og desktopvenligt, og at performance og SEO var optimeret.</p>
                                 </li>
                                 <li>
-                                    <h4>Værktøjer</h4>
+                                    <h5>Værktøjer</h5>
                                     <ul class="checkboxes">
                                         <li><input type="checkbox" checked disabled>Adobe Photoshop</li>
                                         <li><input type="checkbox" checked disabled>Figma</li>
@@ -230,7 +237,7 @@
             </div>
             
             <!-- PROJEKT 4 -->
-            <div class="projects-grid reverse">
+            <div class="grid reverse">
                 <div class="note-container">
                     <div class="note-header">
                         <div class="buttons">
@@ -242,25 +249,25 @@
                     </div>
                     <div class="note-content">
                         <p class="note-date">Interaktiv Storytelling steno 2.semester</p>
-                        <h2>Steno-museet</h2>
+                        <h3>Steno-museet</h3>
                         <div class="note-text">
                             <ul class="task-list">
                                 <li>
-                                    <h4>Beskrivelse</h4>
+                                    <h5>Beskrivelse</h5>
                                     <p>Vores projekt for Steno-museet var et gruppearbejde, hvor vi udviklede en interaktiv storytelling-løsning, der engagerer brugerne med tekst, video, animation, billeder og lyd. Vi fokuserede på kroppens idealkoncept og dets udvikling over tid, og anvendte JSON-data for dynamisk indhold, hvilket skaber en immersiv oplevelse, der supplerer det fysiske udstillingsrum.</p>
                                 </li>
                                 <li>
-                                    <h4>Vision</h4>
+                                    <h5>Vision</h5>
                                     <p>Vores vision er at skabe en interaktiv oplevelse, der engagerer brugerne i en dybdegående og personlig fortælling om kroppens idealer. Vi ønsker at bruge storytelling til at skabe en følelsesmæssig forbindelse, der udfordrer gæsternes opfattelse af skønhed og giver nye perspektiver.</p>
                                 </li>
                                 <li>
-                                    <h4>Vejen til resultatet</h4>
+                                    <h5>Vejen til resultatet</h5>
                                     <p>Vi valgte kroppens idealkoncept som emne og udviklede et storyboard for en video, der var central i fortællingen. Vi integrerede animationer, infografikker, lyd og billeder for at visualisere udviklingen af kropsidealer. Ved at bruge JSON-data og DOM-manipulation skabte vi en interaktiv løsning, der kunne tilpasses brugerens interaktion. Vores idé var at inkludere QR-koder, så besøgende kunne scanne dem inde i museet og bevæge sig rundt i eget tempo. Jeg designede kvinderne i Illustrator og kodede en quiz, hvor brugeren skulle gætte årstiden for den kvinde, de så.
 
                                         Som en del af eksamen præsenterede vi vores projekt for Steno-museet ved at pitche vores idé, hvilket var en vigtig del af processen.</p>
                                 </li>
                                 <li>
-                                    <h4>Værktøjer</h4>
+                                    <h5>Værktøjer</h5>
                                     <ul class="checkboxes">
                                         <li><input type="checkbox" checked disabled>Adobe Photoshop</li>
                                         <li><input type="checkbox" checked disabled>HTML5</li>
@@ -281,6 +288,8 @@
                     <img src="img/gif.gif" alt="">
                 </div>
             </div>
+
+        </div>
     
         <!-- Footer -->
         <footer class="folder-footer">

@@ -4,8 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Om mig - Mit Portfolio</title>
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/burger.css">
     <link rel="stylesheet" href="css/generelt.css">
+    <link rel="stylesheet" href="css/text.css">
+    <link rel="stylesheet" href="css/grid.css">
+    <link rel="stylesheet" href="css/note.css">
     <link rel="stylesheet" href="css/om-mig.css">
+     <!-- Google fonts -->
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for ikoner -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
@@ -28,48 +37,57 @@
             <a href="kontakt.html" class="tab">Kontakt</a>
         </nav>
 
+        <!-- Indhold i "mappen" -->
+        <div class="folder-content">
 
+            <h1 class="hide-on-desktop">Om mig</h1>
 
-        <div class="projects-grid">
-            <div class="message-container">
-                <div class="message-header">
-                    <div class="buttons">
-                        <span class="green"></span>
+            <div class="grid">
+                <div class="note-container">
+                    <div class="note-header">
+                        <div class="buttons">
+                            <span class="message">
+                                <i class="fa-solid fa-comment"></i>
+                            </span>
+                        </div>
+                        <span class="note-title">Besked fra +45 28 57 64 32</span>
                     </div>
-                    <span class="message-title">Besked fra +45 28 57 64 32</span>
+                    <div class="note-content">
+                        <p class="note-date">Gem som ny kontakt? - Nikoline Schmidt</p>
+                        <div class="note-text full-height">
+                            <ul class="task-list">
+                                <li>
+                                    <h5>Halløjsa!</h5>
+                                    <p>Jeg hedder Nikoline, er 25 år, og til dagligt kan I finde mig i min lille finurlige lejlighed i Graven. I weekenden er der en god chance for, at jeg enten arbejder på Skor eller står i karaoke-rummet og giver den max gas – helst til "I Will Survive"! 🎤✨
+                                        Jeg er i gang med mit 3. semester som multimediedesigner og drømmer om en fremtid inden for content creation, design, digital kommunikation eller sociale medier.</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-                <div class="message-content">
-                    <p class="message-date">Gem som ny kontakt?</p>
-                    <h2>Forslået ny kontakt Nikoline Schmidt?</h2>
-                    <div class="message-text">
-                        <ul class="task-list">
-                            <li>
-                                <h4>Halløjsa!</h4>
-                                <p>Jeg hedder Nikoline, er 25 år, og til dagligt kan I finde mig i min lille finurlige lejlighed i Graven. I weekenden er der en god chance for, at jeg enten arbejder på Skor eller står i karaoke-rummet og giver den max gas – helst til "I Will Survive"! 🎤✨
-                                    Jeg er i gang med mit 3. semester som multimediedesigner og drømmer om en fremtid inden for content creation, design, digital kommunikation eller sociale medier.</p>
-                            </li>
-                        </ul>
-                    </div>
+                <!-- Højre side med tekst og billede -->
+                <div class="image">
+                    <img src="img/kryds.webp" alt="Kryds og tværs af min personlighed">
                 </div>
             </div>
-            <!-- Højre side med tekst og billede -->
-            <div class="right-side">
-                <img src="img/kryds.webp" alt="Kryds og tværs af min personlighed">
-                <h2>Kryds og tværs af min personlighed</h2>
-                <p>Jeg er en person, der elsker at skabe, planlægge og bringe mennesker sammen. Uanset om det er kreative projekter, events eller design, går jeg altid all in. Mit kryds og tværs afspejler de ord, der bedst beskriver mig.</p>
-                <ul>
-                    <li>Kreativ – Idéer og visuelle koncepter er min legeplads, hvor jeg tænker ud af boksen.</li>
-                    <li>Detaljeorienteret – Når jeg planlægger noget, går jeg all in og sørger for, at alt spiller.</li>
-                    <li>Initiativrig – Jeg tager teten og omsætter idéer til handling.</li>
-                    <li>Social – At samle mennesker og skabe gode oplevelser er noget, jeg brænder for.</li>
-                    <li>Idérig – Jeg får konstant nye ideer og tænker i koncepter.</li>
-                    <li>Humoristisk – Jeg elsker at have det sjovt og sprede god energi.</li>
-                    <li>Energisk – Jeg går til opgaver med masser af drive og engagement, hvilket hjælper mig med at holde fokus og motivation.</li>
-                </ul>
-            </div>
-        </div>
         
+            <div class="grid">
+                <div>
+                    <h2>Kryds og tværs af min personlighed</h2>
+                    <p>Jeg er en person, der elsker at skabe, planlægge og bringe mennesker sammen. Uanset om det er kreative projekter, events eller design, går jeg altid all in. Mit kryds og tværs afspejler de ord, der bedst beskriver mig.</p>
+                    <ul>
+                        <li>Kreativ – Idéer og visuelle koncepter er min legeplads, hvor jeg tænker ud af boksen.</li>
+                        <li>Detaljeorienteret – Når jeg planlægger noget, går jeg all in og sørger for, at alt spiller.</li>
+                        <li>Initiativrig – Jeg tager teten og omsætter idéer til handling.</li>
+                        <li>Social – At samle mennesker og skabe gode oplevelser er noget, jeg brænder for.</li>
+                        <li>Idérig – Jeg får konstant nye ideer og tænker i koncepter.</li>
+                        <li>Humoristisk – Jeg elsker at have det sjovt og sprede god energi.</li>
+                        <li>Energisk – Jeg går til opgaver med masser af drive og engagement, hvilket hjælper mig med at holde fokus og motivation.</li>
+                    </ul>
+                </div>
+            </div>
 
+        </div>
 
 
         <!-- Footer -->

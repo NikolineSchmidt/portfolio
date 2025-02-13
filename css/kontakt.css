@@ -10,6 +10,6 @@
 /* Media Queries for smaller screens */
 @media (max-width: 768px) {
     .postkort-img {
-        width: 80%;
+        width: 100%;
     }
 }

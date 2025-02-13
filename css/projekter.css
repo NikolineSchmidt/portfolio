@@ -1,173 +1,3 @@
-
-.projects-grid {
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-    align-items: flex-start; /* Tilføj denne linje */
-    margin-bottom: 50px;
-}
-
-
-.projects-grid.reverse {
-    flex-direction: row-reverse;
-}
-
-
-
-.note-container {
-    width: 50%;
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-    font-family: "Arial", sans-serif;
-}
-
-
-/* Øverste bjælke med MacOS-knapper */
-.note-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background: #fceff7;
-    padding: 15px 15px;
-    border-radius: 10px 10px 0 0;
-}
-
-/* MacOS-runde knapper */
-.buttons {
-    display: flex;
-    gap: 6px;
-}
-
-.buttons span {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    display: inline-block;
-}
-
-.red { background: #ff5f56; }
-.yellow { background: #ffbd2e; }
-.green { background: #27c93f; }
-
-/* Overskrift */
-.note-title {
-    font-weight: bold;
-    font-size: 14px;
-    color: #555;
-}
-
-/* Indhold af noten */
-.note-content {
-    position: relative;
-    overflow: hidden;
-    padding: 25px 40px;
-    background: white;
-    border-bottom-left-radius: inherit;
-    border-bottom-right-radius: inherit;
-}
-
-/* Dato */
-.note-date {
-    font-size: 12px;
-    color: gray;
-    margin-bottom: 10px;
-    text-align: center;
-}
-
-.note-text {
-    max-height: 250px; /* Justér denne værdi for at begrænse visningen */
-    overflow: hidden;
-    transition: max-height 0.4s ease-in-out;
-}
-
-.note-text.expanded {
-    max-height: 1000px; /* Sørg for, at hele indholdet vises */
-}
-
-.read-more-btn {
-    display: block;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background-color: #1E88E5;
-    color: white;
-    border: none;
-    padding: 10px;
-    font-size: 14px;
-    cursor: pointer;
-    text-align: center;
-    margin: 0 auto;
-}
-
-.read-more-btn i{
-    font-size: 20px;
-    color: #fcdef0;
-}
-
-.read-more-btn:hover {
-    background-color: #1565C0;
-}
-
-
-/* Tjekliste styling */
-.task-list {
-    list-style: none;
-    padding: 0;
-}
-
-.task-list li {
-    margin: 8px 0 25px;
-    font-size: 14px;
-    color: #555;
-}
-
-.task-list li h4{
-    margin-bottom: 3px;
-}
-
-
-.checkboxes{
-    margin-top: 10px;
-    padding: 0;
-}
-
-.checkboxes li{
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    margin-bottom: 5px;
-}
-
-/* Skjuler standard checkbox */
-.checkboxes input[type="checkbox"] {
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    width: 20px;
-    height: 20px;
-    border: 2px solid #1E88E5;
-    border-radius: 50%; /* Gør dem runde */
-    background-color: #1E88E5;
-    position: relative;
-    cursor: default; /* Ingen markør-ændring */
-}
-
-/* Tilføj et checkmark */
-.checkboxes input[type="checkbox"]::after {
-    content: '✔';
-    font-size: 12px;
-    color: white;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-weight: bold;
-}
-
 .image{
     width: 50%;
 }
@@ -175,7 +5,6 @@
 .image img{
     width: 100%;
 }
-
 
 .carousel-container {
     position: relative;
@@ -192,6 +21,7 @@
     display: block;
     max-height: 450px; /* Juster denne værdi efter behov */
     object-fit: cover; /* Sørg for, at billederne fylder karusellen uden at forvrænge */
+    border-radius: 10px;
 }
 
 .carousel {
@@ -215,7 +45,7 @@ button.carousel-next {
     padding: 10px;
     cursor: pointer;
     font-size: 18px;
-    z-index: 1000;
+    z-index: 999;
 }
 
 .carousel-prev {
@@ -226,26 +56,32 @@ button.carousel-next {
     right: 0;
 }
 
-button:hover {
+button.carousel-prev:hover,
+button.carousel-next:hover {
     background-color: #fcdef0;
 }
 
-
-.video-heading {
-    text-align: center; /* Centrerer overskriften */
-    font-size: 24px; /* Større skriftstørrelse */
-    font-weight: bold; /* Gør overskriften fed */
-    margin-bottom: 20px; /* Mellemrum under overskriften */
-    color: #333; /* Mørk tekstfarve for god læsbarhed */
+.tag{
+    display: flex;
+    justify-content: end;
+    flex-direction: row;
+    padding: 10px 0 0;
 }
+
+.tag span{
+    font-size: 15px;
+}
+
 
 /* Stil til video-sektionen */
 .video-section {
+    width: 75%;
     display: flex;
     flex-direction: row; /* Ændret til row, så videoer står ved siden af hinanden */
     gap: 20px; /* Mellemrum mellem videoerne */
     justify-content: center; /* Centerer videoerne horisontalt */
     flex-wrap: wrap; /* Gør, at videoerne kan bryde linje på mindre skærme */
+    margin: 0 auto;
 }
 
 .video-container {
@@ -262,26 +98,9 @@ video {
 
 
 
-
-
 @media (max-width: 768px) {
     .image {
         width: 100%;
-    }
-    .projects-grid{
-        flex-direction: column;
-    }
-
-    .projects-grid.reverse {
-        flex-direction: column; /* Billede kommer efter note-content på mobil */
-    }
-    .note-container {
-        width: 100%;
-    } 
-
-    /* Juster tekstjusteringen for mobil */
-    .note-content, .note-text, .task-list li, .checkboxes li {
-        text-align: left;
     }
 
     .video-section {

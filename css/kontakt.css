@@ -1,0 +1,15 @@
+.postkort-img {
+    width: 100%;
+    max-width: 670px;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* Media Queries for smaller screens */
+@media (max-width: 768px) {
+    .postkort-img {
+        width: 80%;
+    }
+}

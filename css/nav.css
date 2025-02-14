@@ -73,12 +73,11 @@
     /* Stil på undermenu knapper (faner) */
     .tab {
         padding: 12px 20px; /* Mindre padding for kompakt stil */
-        font-size: 1.2rem; /* Mindre tekststørrelse */
+        font-size: 2.2rem; /* Mindre tekststørrelse */
         width: 80%;
         max-width: 250px; /* Smallere knapper */
         text-align: center;
         color: #fcdef0;
-        border-radius: 8px;
         margin: 8px 0; /* Mindre afstand mellem knapper */
         cursor: pointer;
         transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
@@ -86,7 +85,7 @@
 
 
     .logo {
-        height: 30px; /* Mindre logo på mobil */
+        height: 40px; /* Mindre logo på mobil */
     }
 
 }

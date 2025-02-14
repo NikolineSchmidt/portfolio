@@ -1,5 +1,6 @@
 /* Generel styling */
 body {
+    font-family: "Poppins", serif;
     background-color: #fcdef0;
     display: flex;
     justify-content: center;

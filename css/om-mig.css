@@ -3,6 +3,23 @@
     width: 50%;
 }
 
+.personality-section h2 {
+    margin-bottom: 1rem; /* Afstand under overskriften */
+}
+
+.personality-section .personality-list {
+    list-style-type: none; /* Fjern punkttegn */
+    padding-left: 0; /* Fjern standard indrykning */
+    font-size: 1rem; /* Gør teksten mindre */
+    line-height: 1.5; /* Bedre læsbarhed */
+}
+
+.personality-section .personality-list li {
+    margin-bottom: 0.5rem; /* Afstand mellem hvert punkt */
+}
+
+
+
 @media (max-width: 768px) {
     .image{
         width: 100%;

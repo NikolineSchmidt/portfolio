@@ -41,15 +41,18 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 function showMockup(type) {
-    document.getElementById('mobile-mockup').classList.add('hidden');
-    document.getElementById('desktop-mockup').classList.add('hidden');
+    // Skjul alle mockups
+    document.querySelectorAll('.figma-mockup').forEach(mockup => {
+        mockup.classList.add('hidden');
+    });
 
-    document.getElementById(type + '-mockup').classList.remove('hidden');
+    // Vis den valgte mockup
+    document.getElementById(`${type}-mockup`).classList.remove('hidden');
 
+    // Opdater knappernes aktiv tilstand
     document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
     document.querySelector(`.tab-btn[onclick="showMockup('${type}')"]`).classList.add('active');
 }
-
 
 function openFigma(type) {
     if (type === 'desktop') {

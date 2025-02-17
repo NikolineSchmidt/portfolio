@@ -2,10 +2,6 @@
     width: 50%;
 }
 
-.image img{
-    width: 100%;
-}
-
 .carousel-container {
     position: relative;
     width: 100%;
@@ -96,7 +92,65 @@ video {
     border-radius: 8px; /* Giver videoerne rundede hjørner */
 }
 
+.figma-container {
+    width: 50%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
 
+.figma-mockup {
+    position: relative;
+    text-align: center;
+    display: block; /* Vis som standard */
+}
+
+.figma-mockup.hidden {
+    display: none; /* Skjul, hvis klassen 'hidden' er tilføjet */
+}
+
+.figma-mockup iframe {
+    width: 100%;
+    height: 450px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.figma-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.tab-btn {
+    padding: 8px 15px;
+    background: #fceff7;
+    color: #555;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.tab-btn:hover {
+    background: #fcdef0;
+}
+
+.tab-btn.active {
+    background: #fcdef0;
+}
+
+.steno-video {
+    width: 50%; /* Juster bredden efter behov */
+    max-width: 400px; /* Sæt en maksimumsbredde */
+    height: auto; /* Bevar proportionerne */
+    border-radius: 10px; /* Tilføj rundede hjørner, hvis ønsket */
+    
+    display: block; /* Sørger for, at margin auto fungerer */
+    margin: 0 auto; /* Centrerer videoen horisontalt */
+}
 
 
 
@@ -113,6 +167,11 @@ video {
     .video-container {
         flex: 1 1 100%; /* Gør, at videoerne fylder 100% af bredden */
         max-width: 100%; /* Videoerne fylder hele bredden */
+    }
+
+    .steno-video {
+        width: 80%; /* Juster bredden på mobil */
+        max-width: 300px; /* Juster maksimumsbredden på mobil */
     }
 }
 

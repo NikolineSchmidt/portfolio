@@ -1,15 +1,112 @@
-.postkort-img {
-    width: 100%;
-    max-width: 670px;
-    height: auto;
-    border-radius: 10px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+/* Grid til postkort og photobooth */
+.grid {
+    display: flex;
+    flex-direction: row;
+    gap: 20px; /* Afstand mellem postkort og photobooth */
+    align-items: stretch; /* Sørg for, at begge elementer strækker sig til samme højde */
+    margin: 20px 0; /* Tilføj margin øverst og nederst */
 }
 
-/* Media Queries for smaller screens */
+/* Postkort-styling */
+.image {
+    flex: 1; /* Fylder halvdelen af pladsen */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.postkort-img {
+    width: 100%; /* Fylder hele bredden af .image-containeren */
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover; /* Sørg for, at billedet fylder uden at forvrænge */
+}
+
+/* Photobooth-container */
+.photobooth {
+    flex: 1; /* Fylder halvdelen af pladsen */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Note-container styling */
+.note-container {
+    background-color: #fff; /* Hvid baggrund */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Skygge */
+    overflow: hidden; /* Sørg for, at indholdet ikke går ud over containeren */
+    width: 100%; /* Fylder hele bredden af .photobooth */
+    height: 100%; /* Fylder hele højden af .photobooth */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header i note-container - centrer tekst, men behold tre prikker til venstre */
+.note-header {
+    background-color: #fceff7; /* Lys pink baggrund */
+    padding: 10px;
+    display: flex;
+    justify-content: center; /* Centrerer teksten */
+    align-items: center; /* Centrerer indholdet vertikalt */
+    position: relative; /* For at kunne placere de tre prikker korrekt */
+}
+
+/* Placering af de tre prikker til venstre */
+.buttons {
+    position: absolute; /* Gør knapperne uafhængige af flexbox-layoutet */
+    left: 10px; /* Placerer dem tæt på venstre kant */
+    display: flex;
+    gap: 5px;
+}
+
+.buttons span {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.buttons .red { background-color: #ff5f56; }
+.buttons .yellow { background-color: #ffbd2e; }
+.buttons .green { background-color: #27c93f; }
+
+.note-title {
+    font-size: 16px;
+    color: #555;
+    text-align: center; /* Centrerer teksten i .note-title */
+    margin-left: 30px; /* Skubber titlen lidt til højre, så den ikke overlapper med de tre prikker */
+}
+
+/* Note-content styling */
+.note-content {
+    display: flex; /* Gør .note-content til en flex-container */
+    justify-content: center; /* Centrer indholdet horisontalt */
+    align-items: center; /* Centrer indholdet vertikalt */
+    padding: 20px; /* Tilføj padding */
+    text-align: center; /* Centrer teksten */
+    height: 100%; /* Fylder hele højden af containeren */
+}
+
+/* Billede i note-content */
+.photobooth-img {
+    width: 100%; /* Fylder hele bredden af .note-content */
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover; /* Sørg for, at billedet fylder uden at forvrænge */
+}
+
+/* Responsivt design */
 @media (max-width: 768px) {
-    .postkort-img {
-        width: 100%;
+    .grid {
+        flex-direction: column; /* Stak elementer lodret på mobil */
+    }
+
+    .image, .photobooth {
+        width: 100%; /* Fylder hele bredden på mobil */
+    }
+
+    .note-title {
+        font-size: 14px; /* Reducer fontstørrelse på mobil */
     }
 }

@@ -39,3 +39,22 @@ document.addEventListener("DOMContentLoaded", function() {
     document.querySelector('.carousel-prev').addEventListener('click', () => moveSlide(-1));
     document.querySelector('.carousel-next').addEventListener('click', () => moveSlide(1));
 });
+
+function showMockup(type) {
+    document.getElementById('mobile-mockup').classList.add('hidden');
+    document.getElementById('desktop-mockup').classList.add('hidden');
+
+    document.getElementById(type + '-mockup').classList.remove('hidden');
+
+    document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+    document.querySelector(`.tab-btn[onclick="showMockup('${type}')"]`).classList.add('active');
+}
+
+
+function openFigma(type) {
+    if (type === 'desktop') {
+        window.open("https://www.figma.com/design/OReMcASS52cTpf0Meyfrbb/zerobuzzbrew-desktop-mockup-nikoline?node-id=0-1&p=f&t=Rb2gWtqTTGkBgihS-0", "_blank");
+    } else if (type === 'mobile') {
+        window.open("https://www.figma.com/design/1mhFQxIx4HxIHEAgSJZ69c/zerobuzzbrew-mobil-mockup-nikoline?node-id=0-1&p=f&t=kkgffl0nubX2yyYw-0", "_blank");
+    }
+}

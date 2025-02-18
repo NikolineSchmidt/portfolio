@@ -6,6 +6,7 @@
     <title>Kontakt & CV - Mit Portfolio</title>
     <link rel="stylesheet" href="css/nav.css">
     <link rel="stylesheet" href="css/burger.css">
+    <link rel="stylesheet" href="css/grid.css">
     <link rel="stylesheet" href="css/generelt.css">
     <link rel="stylesheet" href="css/text.css">
     <link rel="stylesheet" href="css/kontakt.css">
@@ -35,26 +36,33 @@
         </nav>
 
 
-        <div class="grid">
+        <div class="folder-content">
             <h1 class="hide-on-desktop">Kontakt</h1>
-            <!-- Postkort til venstre -->
-            <div class="image">
-                <img src="img/postkort1.webp" alt="Postkort" class="postkort-img">
-            </div>
-        
-            <!-- Photobooth til højre -->
-            <div class="photobooth">
-                <div class="note-container">
-                    <div class="note-header">
-                        <div class="buttons">
-                            <span class="red"></span>
-                            <span class="yellow"></span>
-                            <span class="green"></span>
-                        </div>
-                        <span class="note-title">Photo Booth</span>
+
+            <div class="grid">
+                <div class="grid-half left w50">
+                    <!-- Postkort til venstre -->
+                    <div class="image">
+                        <img src="img/postkort1.webp" alt="Postkort" class="postkort-img">
                     </div>
-                    <div class="note-content">
-                        <img src="img/photobooth.webp" alt="Photobooth" class="photobooth-img">
+                </div>
+
+                <div class="grid-half right">
+                    <!-- Photobooth til højre -->
+                    <div class="photobooth">
+                        <div class="note-container">
+                            <div class="note-header">
+                                <div class="buttons">
+                                    <span class="red"></span>
+                                    <span class="yellow"></span>
+                                    <span class="green"></span>
+                                </div>
+                                <span class="note-title">Photo Booth</span>
+                            </div>
+                            <div class="note-content">
+                                <img src="img/photobooth.webp" alt="Photobooth" class="photobooth-img">
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -83,5 +91,7 @@
 
     
     <script src="js/generelt.js"></script>
+    <script src="js/note.js"></script>
+    <script src="js/animate.js"></script>
 </body>
 </html>

@@ -1,24 +1,12 @@
 
-.text{
-    width: 50%;
-}
-
 .image{
-    width: 35%;
-    align-self: flex-end;
+    width: 100%;
 }
 
 .image img{
     width: 100%;
 }
 
-/* Mobilvenlig justering */
-@media (max-width: 768px) {
-    .folder-content div {
-        width: 100%;
-    }
-    .folder-image {
-        width: 100%;
-        margin-bottom: 40px;
-    }
+.text{
+    text-align: left;
 }

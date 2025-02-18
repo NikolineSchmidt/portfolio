@@ -1,24 +1,11 @@
-
 .image{
     width: 50%;
 }
 
-.personality-section h2 {
-    margin-bottom: 1rem; /* Afstand under overskriften */
+.image img{
+    width: 100%;
+    border-radius: 10px;
 }
-
-.personality-section .personality-list {
-    list-style-type: none; /* Fjern punkttegn */
-    padding-left: 0; /* Fjern standard indrykning */
-    font-size: 1rem; /* Gør teksten mindre */
-    line-height: 1.5; /* Bedre læsbarhed */
-}
-
-.personality-section .personality-list li {
-    margin-bottom: 0.5rem; /* Afstand mellem hvert punkt */
-}
-
-
 
 @media (max-width: 768px) {
     .image{
@@ -26,7 +13,99 @@
     }
 }
 
-.image img{
-    width: 100%;
-    border-radius: 10px;
+
+/* Dock container */
+.dock {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 1.5rem;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
+
+/* Dock-item (hvert ikon og tooltip) */
+.dock-item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+/* Ikoner i dock'en */
+.dock-item img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 0.5rem;
+    transition: transform 0.3s ease;
+}
+
+/* Tooltip tekst */
+.dock-item .tooltip {
+    visibility: hidden;
+    width: 200px;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 10px;
+    position: absolute;
+    z-index: 1;
+    bottom: 150%; 
+    left: 50%;
+    transform: translateX(-50%); /* Centrer tooltip */
+    opacity: 0;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Hover-effekt for dock-item */
+.dock-item:hover img {
+    transform: scale(1.2); /* Forstør ikonet ved hover */
+}
+
+.dock-item:hover .tooltip {
+    visibility: visible;
+    opacity: 1; /* Vis tooltip ved hover */
+}
+
+/* Media Queries for Mobil */
+@media (max-width: 768px) {
+    .dock {
+        gap: 1rem; /* Mindre afstand mellem ikoner */
+        padding: 0.5rem; /* Mindre padding */
+        justify-content: flex-start; /* Start fra venstre for at undgå overflow */
+    }
+
+    .dock-item img {
+        width: 40px; /* Mindre ikoner */
+        height: 40px;
+    }
+
+    .dock-item .tooltip {
+        width: 150px; /* Smallere tooltip */
+        font-size: 0.9rem; /* Mindre tekst */
+    }
+
+    .programs-section h2 {
+        font-size: 1.5rem; /* Mindre overskrift */
+    }
+}
+
+@media (max-width: 480px) {
+    .dock {
+        gap: 0.75rem; /* Endnu mindre afstand */
+    }
+
+    .dock-item img {
+        width: 35px; /* Endnu mindre ikoner */
+        height: 35px;
+    }
+
+    .dock-item .tooltip {
+        width: 120px; /* Smallere tooltip */
+        font-size: 0.8rem; /* Mindre tekst */
+    }
+}
+

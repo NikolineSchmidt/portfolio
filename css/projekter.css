@@ -1,22 +1,27 @@
+/* Billeder */
 .image{
-    width: 50%;
+    width: 100%;
 }
 
+
+
+
+/* Carousel */
 .carousel-container {
     position: relative;
     width: 100%;
     max-width: 600px;
     margin: auto;
     overflow: hidden;
-    align-self: flex-start; /* Tilføj denne linje */
+    align-self: flex-start;
 }
 
 .carousel-item img {
     width: 100%;
     height: auto;
     display: block;
-    max-height: 450px; /* Juster denne værdi efter behov */
-    object-fit: cover; /* Sørg for, at billederne fylder karusellen uden at forvrænge */
+    max-height: 450px; 
+    object-fit: cover;
     border-radius: 10px;
 }
 
@@ -69,15 +74,17 @@ button.carousel-next:hover {
 }
 
 
-/* Stil til video-sektionen */
+
+
+/* Tiktok */
 .video-section {
-    width: 75%;
+    width: 60%;
     display: flex;
     flex-direction: row; /* Ændret til row, så videoer står ved siden af hinanden */
     gap: 20px; /* Mellemrum mellem videoerne */
     justify-content: center; /* Centerer videoerne horisontalt */
     flex-wrap: wrap; /* Gør, at videoerne kan bryde linje på mindre skærme */
-    margin: 0 auto;
+    margin: 80px auto;
 }
 
 .video-container {
@@ -86,17 +93,25 @@ button.carousel-next:hover {
     margin: 0 auto; /* Centerer videoerne i deres container */
 }
 
+
+
+
+
+/* Video */
 video {
     width: 100%; /* Gør videoerne responsive */
     height: auto; /* Bevarer videoens proportioner */
     border-radius: 8px; /* Giver videoerne rundede hjørner */
 }
 
+
+
+
+/* Figma */
 .figma-container {
-    width: 50%;
+    width: 100%;
     max-width: 800px;
     margin: 0 auto;
-    padding: 20px;
 }
 
 .figma-mockup {
@@ -142,8 +157,12 @@ video {
     background: #fcdef0;
 }
 
-.steno-video {
-    width: 50%; /* Juster bredden efter behov */
+
+
+
+/* Vertical video */
+.vertical-video {
+    width: 100%; /* Juster bredden efter behov */
     max-width: 400px; /* Sæt en maksimumsbredde */
     height: auto; /* Bevar proportionerne */
     border-radius: 10px; /* Tilføj rundede hjørner, hvis ønsket */
@@ -160,6 +179,7 @@ video {
     }
 
     .video-section {
+        width: 80%;
         flex-direction: row; /* Ændrer til kolonne på små skærme, så videoerne vises under hinanden */
         gap: 15px; /* Mellemrum mellem videoerne på mobile enheder */
     }
@@ -169,7 +189,7 @@ video {
         max-width: 100%; /* Videoerne fylder hele bredden */
     }
 
-    .steno-video {
+    .vertical-video {
         width: 80%; /* Juster bredden på mobil */
         max-width: 300px; /* Juster maksimumsbredden på mobil */
     }

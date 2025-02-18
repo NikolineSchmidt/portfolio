@@ -1,10 +1,46 @@
 
 .note-container {
-    width: 50%;
+    width: 100%;
     background: white;
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
     font-family: "Arial", sans-serif;
+}
+
+.note-container.message{
+    /* Skjul elementet som standard */
+    opacity: 0;
+    transform: translateY(20px); /* Startposition: flyttet nedad */
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+/* Animation, når elementet er i viewporten */
+.note-container.message.visible {
+    animation: bounceIn 0.8s ease-out forwards; /* Kør bounceIn-animationen */
+}
+
+@keyframes bounceIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px); /* Start: usynlig og flyttet nedad */
+    }
+    20% {
+        opacity: 1;
+        transform: translateY(-30px); /* Hop op */
+    }
+    40% {
+        transform: translateY(10px); /* Fald lidt ned */
+    }
+    60% {
+        transform: translateY(-10px); /* Hop op igen */
+    }
+    80% {
+        transform: translateY(5px); /* Fald lidt ned */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* Slutposition: fuldt synlig og i normal position */
+    }
 }
 
 /* Øverste bjælke med MacOS-knapper */
@@ -58,7 +94,7 @@
 .note-content {
     position: relative;
     overflow: hidden;
-    padding: 25px 40px;
+    padding: 20px;
     background: white;
     border-bottom-left-radius: inherit;
     border-bottom-right-radius: inherit;

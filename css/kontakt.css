@@ -7,6 +7,12 @@
     margin: 20px 0; /* Tilføj margin øverst og nederst */
 }
 
+h1 {
+    text-align: center;
+    color: white;
+}
+
+
 /* Postkort-styling */
 .image {
     flex: 1; /* Fylder halvdelen af pladsen */
@@ -96,17 +102,21 @@
     object-fit: cover; /* Sørg for, at billedet fylder uden at forvrænge */
 }
 
-/* Responsivt design */
 @media (max-width: 768px) {
     .grid {
-        flex-direction: column; /* Stak elementer lodret på mobil */
+        flex-direction: column;
+        gap: 10px; /* Mindre afstand mellem elementerne */
+        padding: 10px; /* Reducér padding for mindre skærme */
     }
 
     .image, .photobooth {
-        width: 100%; /* Fylder hele bredden på mobil */
+        width: 90%; /* Mindsk bredden lidt, så der er luft på siderne */
+        margin: 0 auto; /* Centrer elementerne */
     }
 
-    .note-title {
-        font-size: 14px; /* Reducer fontstørrelse på mobil */
+    .postkort-img, .photobooth-img {
+        max-width: 100%; /* Sikrer, at billederne ikke bliver for store */
+        height: auto;
     }
 }
+

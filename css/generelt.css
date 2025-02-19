@@ -21,7 +21,7 @@ body {
     margin-top: 10px;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start; /* Start indholdet øverst */
+    justify-content: flex-start; 
     margin-top: 75px;
     margin-bottom: 40px;
 }
@@ -33,7 +33,7 @@ body {
     flex-grow: 1; /* Sørg for, at indholdet udvider sig og skubber footeren nedad */
     display: flex;
     flex-direction: column;
-    justify-content: flex-start; /* Start indholdet øverst */
+    justify-content: flex-start; 
     padding-bottom: 20px; /* Tilføj plads nederst */
 }
 
@@ -78,15 +78,15 @@ body {
     /* Gør folderen til at fylde hele skærmen */
     .folder {
         width: 100vw;  /* Fylder hele skærmens bredde */
-        min-height: 100vh; /* Fylder hele skærmens højde */
-        background-color: #64B5F6; /* Blå baggrund */
-        border-radius: 0; /* Fjern afrundede hjørner */
-        padding: 15px; /* Mindre padding for at spare plads */
+        min-height: 100vh; 
+        background-color: #64B5F6; 
+        border-radius: 0; 
+        padding: 15px; 
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
-        box-shadow: none; /* Fjern skygge på mobil */
+        box-shadow: none; 
         margin: 0;
         padding: 45px 0;
     }
@@ -95,23 +95,23 @@ body {
     .folder-content {
         text-align: center;
         color: #fff;
-        font-size: 1.2rem; /* Mindre tekst på mobil */
+        font-size: 1.2rem; 
         flex-grow: 1;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        padding: 15px; /* Mindre padding */
+        padding: 15px; 
     }
 
     /* Footer */
     .folder-footer {
-        padding: 15px; /* Mindre padding */
+        padding: 15px; 
         background: rgba(255, 255, 255, 0.2);
         border-radius: 12px;
         display: flex;
         flex-direction: column; /* Stak elementer lodret på mobil */
         align-items: center;
-        gap: 8px; /* Mindre afstand mellem elementer */
+        gap: 8px; 
         margin-top: auto;
         width: 100%;
         max-width: -webkit-fill-available;

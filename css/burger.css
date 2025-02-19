@@ -1,70 +1,77 @@
-
+/* Skjuler burger-menuen som standard */
 .burger {
-    display: none;
+    display: none; 
 }
 
-
+/* Tilpasser burger-menuen for skærme med max-bredde 768px (mobil) */
 @media (max-width: 768px) {
+    /* Viser burger-menuen på mobil */
     .burger {
-        display: block;
-        position: absolute;
-        top: 20px; /* Mindre plads over burgermenuen */
-        right: 15px; /* Tættere på højre kant */
-        cursor: pointer;
-        background: none;
-        border: none;
-        padding: 8px; /* Mindre klikbart område */
-        z-index: 1001;
+        display: block; 
+        position: absolute; 
+        top: 20px; 
+        right: 15px; 
+        cursor: pointer; /* Gør burger-menuen klikbar */
+        background: none; 
+        border: none; 
+        padding: 8px; 
+        z-index: 1001; 
     }
 
+    /* Definerer størrelsen og positionen på burger-boxen */
     .burger-box {
         width: 30px;
         height: 24px;
-        display: inline-block;
-        position: relative;
+        display: inline-block; 
+        position: relative; 
     }
 
+    /* Stilarterne for de tre linjer i burger-menuen */
     .burger-inner {
-        width: 100%;
-        height: 3px;
-        background-color: white;
-        position: absolute;
-        left: 0;
-        top: 50%;
-        transform: translateY(-50%);
+        width: 100%; 
+        height: 3px; 
+        background-color: white; 
+        position: absolute; 
+        left: 0; 
+        top: 50%; 
+        transform: translateY(-50%); 
         transition: all 0.3s ease-in-out;
     }
 
+    /* Stilarterne for de to ekstra linjer (før og efter) */
     .burger-inner::before,
     .burger-inner::after {
-        content: '';
-        width: 100%;
-        height: 3px;
-        background-color: white;
-        position: absolute;
-        left: 0;
-        transition: all 0.3s ease-in-out;
+        content: ''; 
+        width: 100%; 
+        height: 3px; 
+        background-color: white; 
+        position: absolute; 
+        left: 0; 
+        transition: all 0.3s ease-in-out; 
     }
 
+    /* Placering af den øverste linje før burger-inner */
     .burger-inner::before {
-        top: -8px;
+        top: -8px; 
     }
 
+    /* Placering af den nederste linje efter burger-inner */
     .burger-inner::after {
-        top: 8px;
+        top: 8px; 
     }
 
-    /* Krydsanimation når burgermenuen er aktiv */
+    /* Animations-stil til kryds, når burger-menuen er aktiv */
     .burger.active .burger-inner {
-        background-color: transparent; /* Fjern den midterste linje */
+        background-color: transparent; 
     }
 
+    /* Rotation og translation af den øverste linje når menuen er aktiv */
     .burger.active .burger-inner::before {
-        transform: rotate(45deg) translate(5px, 5px); /* Roter til kryds */
+        transform: rotate(45deg) translate(5px, 5px); 
     }
 
+    /* Rotation og translation af den nederste linje når menuen er aktiv */
     .burger.active .burger-inner::after {
-        transform: rotate(-45deg) translate(5px, -5px); /* Roter til kryds */
+        transform: rotate(-45deg) translate(5px, -5px); 
     }
-
 }

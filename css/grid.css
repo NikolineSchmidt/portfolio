@@ -1,54 +1,66 @@
+/* Overordnet layout og gridstruktur */
 .grid {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 30px;
-    align-items: center;
-    margin: 80px 0;
+    display: flex; 
+    flex-direction: row; 
+    justify-content: center; 
+    gap: 30px; 
+    align-items: center; 
+    margin: 80px 0; 
 }
 
+/* Specifik margin for .grid.m0 */
 .grid.m0 {
-    margin: 0;
+    margin: 0; 
 }
 
+/* Ændrer rækkefølgen af elementerne i gridet */
 .grid.reverse {
-    flex-direction: row-reverse;
+    flex-direction: row-reverse; 
 }
 
+/* Flex-styling for de enkelte grid-kolonner */
 .grid-half{
-    display: flex;
-    width: 35%;
+    display: flex; /* Brug Flexbox til hver kolonne */
+    width: 35%; 
 }
+
+/* Justering af venstre halvdel af gridet */
 .grid-half.left{
-    justify-content: end;
-    width: 30%;
+    justify-content: end; /* Juster indholdet mod højre */
+    width: 30%; 
 }
+
+/* Justering af højre halvdel af gridet */
 .grid-half.right{
-    justify-content: start;
-    width: 40%;
+    justify-content: start; /* Juster indholdet mod venstre */
+    width: 40%; 
 }
+
+/* Størrelsejustering for specifikke kolonner */
 .grid-half.w40{
-    width: 40%;
+    width: 40%; 
 }
+
 .grid-half.w30{
     width: 30%;
 }
+
 .grid-half.w50{
-    width: 50%;
+    width: 50%; 
 }
 
-
+/* Responsivt design til mobil (maksimalt 768px bredde) */
 @media (max-width: 768px) {
     .grid{
-        flex-direction: column;
+        flex-direction: column; 
     }
 
     .grid.reverse {
-        flex-direction: column; /* Billede kommer efter note-content på mobil */
+        flex-direction: column;
     }
 
     .grid-half.left, .grid-half.right, .grid-half.center{
-        justify-content: center;
-        width: 100%;
+        justify-content: center; 
+        width: 100%; 
     }
 }

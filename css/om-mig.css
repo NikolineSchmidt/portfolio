@@ -72,17 +72,21 @@
 
 /* Media Queries for Mobil */
 @media (max-width: 768px) {
+
+    /* Dock container */
     .dock {
-        gap: 1rem; /* Mindre afstand mellem ikoner */
-        padding: 0.5rem; /* Mindre padding */
+        gap: 1rem; 
+        padding: 0.5rem; 
         justify-content: flex-start; /* Start fra venstre for at undgå overflow */
     }
 
+    /* Ikoner i dock'en */
     .dock-item img {
         width: 40px; /* Mindre ikoner */
         height: 40px;
     }
 
+    /* Tooltip tekst */
     .dock-item .tooltip {
         width: 150px; /* Smallere tooltip */
         font-size: 0.9rem; /* Mindre tekst */

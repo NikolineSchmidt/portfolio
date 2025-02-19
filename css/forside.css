@@ -1,12 +1,15 @@
 
+/* billeder */
 .image{
-    width: 100%;
+    width: 100%; 
 }
 
+/* Sikrer at billedet inden i .image også fylder hele containeren */
 .image img{
-    width: 100%;
+    width: 100%; 
 }
 
+/* Klasse til tekstjustering */
 .text{
-    text-align: left;
+    text-align: left; 
 }

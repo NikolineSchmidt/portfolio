@@ -80,8 +80,8 @@ button.carousel-next:hover {
 .video-section {
     width: 60%;
     display: flex;
-    flex-direction: row; /* Ændret til row, så videoer står ved siden af hinanden */
-    gap: 20px; /* Mellemrum mellem videoerne */
+    flex-direction: row; 
+    gap: 20px; 
     justify-content: center; /* Centerer videoerne horisontalt */
     flex-wrap: wrap; /* Gør, at videoerne kan bryde linje på mindre skærme */
     margin: 80px auto;
@@ -90,7 +90,7 @@ button.carousel-next:hover {
 .video-container {
     flex: 1 1 30%; /* Sørger for, at hver video fylder 30% af containerens bredde */
     max-width: 100%; /* Forhindrer videoerne i at blive for brede */
-    margin: 0 auto; /* Centerer videoerne i deres container */
+    margin: 0 auto; 
 }
 
 
@@ -162,13 +162,13 @@ video {
 
 /* Vertical video */
 .vertical-video {
-    width: 100%; /* Juster bredden efter behov */
+    width: 100%; 
     max-width: 400px; /* Sæt en maksimumsbredde */
     height: auto; /* Bevar proportionerne */
-    border-radius: 10px; /* Tilføj rundede hjørner, hvis ønsket */
+    border-radius: 10px; 
     
-    display: block; /* Sørger for, at margin auto fungerer */
-    margin: 0 auto; /* Centrerer videoen horisontalt */
+    display: block; 
+    margin: 0 auto;
 }
 
 
@@ -181,17 +181,17 @@ video {
     .video-section {
         width: 80%;
         flex-direction: row; /* Ændrer til kolonne på små skærme, så videoerne vises under hinanden */
-        gap: 15px; /* Mellemrum mellem videoerne på mobile enheder */
+        gap: 15px; 
     }
 
     .video-container {
-        flex: 1 1 100%; /* Gør, at videoerne fylder 100% af bredden */
-        max-width: 100%; /* Videoerne fylder hele bredden */
+        flex: 1 1 100%; 
+        max-width: 100%; 
     }
 
     .vertical-video {
         width: 80%; /* Juster bredden på mobil */
-        max-width: 300px; /* Juster maksimumsbredden på mobil */
+        max-width: 300px; 
     }
 }
 

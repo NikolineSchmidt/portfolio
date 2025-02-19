@@ -8,7 +8,7 @@
     /* Viser burger-menuen på mobil */
     .burger {
         display: block; 
-        position: absolute; 
+        position: fixed; /* Ændret fra absolute til fixed */
         top: 20px; 
         right: 15px; 
         cursor: pointer; /* Gør burger-menuen klikbar */

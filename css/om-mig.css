@@ -13,6 +13,12 @@
     }
 }
 
+@media (max-width: 768px) {
+    .burger {
+        right: 35px; /* Juster denne værdi for at flytte burgermenuen tættere på midten */
+    }
+}
+
 
 /* Dock container */
 .dock {
